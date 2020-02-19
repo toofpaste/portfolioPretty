@@ -1,0 +1,228 @@
+
+#menuToggle
+{
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+
+    z-index: 3;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a
+{
+    text-decoration: none;
+    color: #232323;
+
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+    color: tomato;
+}
+
+
+#menuToggle input
+{
+    display: block;
+    width: 54px;
+    height: 40px;
+    position: fixed;
+    top: 43px;
+    left: 40px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 7;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #232323;
+    border-radius: 3px;
+
+    z-index: 2;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+    transform-origin: 0% 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+    opacity: 1;
+    z-index: 4;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+    z-index: 2;
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+    transform: none;
+}
+/*html {*/
+/*    margin-top: -8px;*/
+/*    margin-left: -8px;*/
+/*}*/
+body {
+    overflow-x: hidden;
+}
+#bgImage1 {
+    height: 175vh;
+    min-width: 100vw;
+    position: fixed;
+    top: -10vh;
+    left: 0;
+    z-index: -1;
+}
+#bgImage2 {
+    height: 175vh;
+    min-width: 100vw;
+    position: absolute;
+    top: -10vh;
+    left: 0;
+    z-index: 2;
+}
+#linkedin {
+    position: fixed;
+    right: 10px;
+    height: 51px;
+    top: 33px;
+}
+#github {
+    position: fixed;
+    right: 70px;
+    top: 38px;
+    height: 38px;
+}
+#linklink {
+    position: fixed;
+    right: 10px;
+    height: 51px;
+    top: 33px;
+    width: 50px;
+    z-index: 10;
+}
+#gitlink {
+    position: fixed;
+    right: 70px;
+    top: 38px;
+    height: 38px;
+    width: 39px;
+    z-index: 10;
+}
+
+#topTitle{
+    margin: 17px auto;
+    width: 100px;
+    text-align: center;
+}
+#textTitle {
+    font-family: 'Bree Serif', serif;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #232323;
+    font-size: 28px;
+    letter-spacing: 0px;
+    /* font-weight: bolder; */
+    line-height: 27px;
+}
+#outterName {
+    width: 85vw;
+    height: 330px;
+    position: fixed;
+    left: 50vw;
+    top: 45vh;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#wholeName{
+    font-size: 18vw;
+    font-family: 'Six Caps', sans-serif;
+    letter-spacing: 14px;
+    color: #232323;
+}
+#last {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 9px;
+    -webkit-text-stroke-color: #232323;
+}
+
