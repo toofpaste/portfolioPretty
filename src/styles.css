@@ -138,10 +138,6 @@
 {
     transform: none;
 }
-/*html {*/
-/*    margin-top: -8px;*/
-/*    margin-left: -8px;*/
-/*}*/
 body {
     overflow-x: hidden;
 }
@@ -159,7 +155,7 @@ body {
     position: absolute;
     top: -10vh;
     left: 0;
-    z-index: 2;
+    z-index: 5;
 }
 #linkedin {
     position: fixed;
@@ -226,3 +222,115 @@ body {
     -webkit-text-stroke-color: #232323;
 }
 
+#bottom {
+    z-index: 10;
+    color: white;
+    position: absolute;
+    top: 174vh;
+    height: 100vh;
+}
+#show1{
+    position: absolute;
+    z-index: 10;
+    height: 38vh;
+    width: 85vw;
+    top: 104vh;
+    transform: translate(-50%);
+    left: 50vw;
+    display: grid;
+    grid-template-columns: 32vw 20vw 52vw;
+    grid-auto-rows: 20vh 20vh 20vh;
+
+}
+#about{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+#about img{
+    height: 36vh;
+    padding-top: 5px;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    margin-left: -10px;
+    margin-top: 20px;
+}
+
+#description {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    text-align: center;
+    width: 431px;
+    margin-left: -89px;
+    color: black;
+    border: 3px solid black;
+    height: 355px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    border-radius: 25px;
+    background-color: wheat;
+    font-weight: 600;
+    opacity: 0.9;
+}
+#linkedinabout{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    border: 3px solid black;
+    height: 100px;
+    text-align: center;
+    width: 100px;
+    background-color: wheat;
+    opacity: 0.9;
+    margin-left: -15px;
+    margin-top: 26px;
+    border-radius: 10px;
+}
+#gitImg {
+    height: 79px;
+    margin-top: 9px;
+}
+#linkImg {
+    height: 100px;
+    margin-left: -2px;
+}
+
+#githubabout{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    border: 3px solid black;
+    height: 100px;
+    text-align: center;
+    width: 100px;
+    background-color: wheat;
+    opacity: 0.9;
+    margin-left: -15px;
+    margin-top: 55px;
+    border-radius: 10px;
+}
+#titleText {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    font-family: 'Six Caps', sans-serif;
+    letter-spacing: 6px;
+    font-size: 110px;
+    color: wheat;
+    margin-top: 65px;
+    margin-left: -52px;
+    font-weight: 400;
+    z-index: 10;
+}
+#inLast{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #232323;
+}

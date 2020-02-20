@@ -3,8 +3,17 @@ import bg1 from './img/pietro-de-grandi-y5vLKnZr6Zg-unsplash.jpg';
 import bg2 from './img/pietro-de-grandi-y5vLKnZr6Zg-unsplash2.png';
 import git from './img/github.png';
 import linkd from './img/linkedin.png';
+import me from './img/download.png';
+import AOS from 'aos';
 const ele1 = document.getElementById('bgImage1');
 const ele2 = document.getElementById('bgImage2');
+const ele5 = document.getElementById('myself');
+const ele6 = document.getElementById('linkImg');
+const ele7 = document.getElementById('gitImg');
+ele6.src = linkd;
+ele7.src= git;
+ele5.src = me;
+AOS.init();
 ele1.src = bg1;
 ele2.src = bg2;
 const ele3 = document.getElementById("linkedin");
@@ -12,5 +21,4 @@ const ele4 = document.getElementById('github');
 ele3.src = linkd;
 ele4.src = git;
 $(document).ready(function(){
-
 });
